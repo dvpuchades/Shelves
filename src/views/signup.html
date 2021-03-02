@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shelves</title>
+        <link rel="stylesheet" href="css/signup.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav-bar">
+            <div class="container">
+                <nav class= "nav-main">
+                    <img src="images/logo.png" alt="Shelves logo" class="nav-brand">
+                </nav>
+            </div>
+        </div>
+
+        <div class="message">
+            <form action="/register" method="POST">
+                <div class="form-group">
+                  <input class="form-control" name="user" type="text" placeholder="Usuario">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" name="password" type="password" placeholder="Contraseña">
+                </div>
+                <div class="form-group">
+                  <input class="form-control" name="code" type="text" placeholder="Código">
+                </div>
+                <div class="form-group">
+                  <button type="submit" btn btn-primary btn-block>
+                    Entrar
+                  </button>
+                </div>
+              </form>
+        </div>
+        <div>
+          <a href="/login">
+            Ya tengo una cuenta.
+          </a>
+        </div>
+    </body>
+</html>

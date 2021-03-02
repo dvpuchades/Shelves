@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charser="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shelves</title>
+        <link rel="stylesheet" href="css/mockup.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="nav-bar">
+            <div class="container">
+                <nav class= "nav-main">
+                    <img src="images/logo.png" alt="Shelves logo" class="nav-brand">
+                    <ul class="nav-menu" id = "route">
+                        <li>
+                            <a href="#">/directorio</a>
+                        </li>
+                        <li>
+                            <a href="#">/carpeta</a>
+                        </li>
+                    </ul>
+                    <div class="upload">
+                        <form action="/upload" enctype="multipart/form-data" method="POST">
+                            <input type="file" name="uploaded_file" multiple>
+                            <button type="submit">
+                                <img src="icons/png/005-outbox.png" alt="upload logo" class="nav-brand">
+                            </button>
+                         </form>
+                    </div>
+                    <div class="download">
+                        <img src="icons/png/158-doc-1.png" alt="download logo" class="nav-brand">
+                    </div>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="folders" id="folders">
+                <div>
+                    <a href="#">
+                        <img src="icons/png/119-folder-22.png" alt="dir">
+                        <p>imagenes</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <img src="icons/png/119-folder-22.png" alt="dir">
+                        <p>videos</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <img src="icons/png/119-folder-22.png" alt="dir">
+                        <p>clase</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <img src="icons/png/119-folder-22.png" alt="dir">
+                        <p>proyectos</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <img src="icons/png/051-pdf.png" alt="dir">
+                        <p>trabajo.pdf</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <img src="icons/png/052-doc-3.png" alt="dir">
+                        <p>trabajo.docx</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <img src="icons/png/022-picture-3.png" alt="dir">
+                        <p>calamar.jpg</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <img src="icons/png/070-psd.png" alt="dir">
+                        <p>calamar.psd</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <img src="icons/png/003-video-file-2.png" alt="dir">
+                        <p>fast&furius2.avi</p>
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+                        <img src="icons/png/217-archive.png" alt="dir">
+                        <p>undertale.rar</p>
+                    </a>
+                </div>
+                <script src="scripts/main.js"></script>
+
+            </div>
+        </div>
+    </body>
+</html>
