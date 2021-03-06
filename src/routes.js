@@ -38,7 +38,7 @@ router.get('/list', (req, res)=> {
 
 
 router.get('/download/:filename', function(req, res){ 
-    let file = 'uploads/david/' + req.params.filename 
+    let file = 'uploads' + req.cookies.route + '/' +req.params.filename 
     res.download(file); // Set disposition and send it. 
 });
 
@@ -66,7 +66,9 @@ router.post('/register', (req, res)=>{
         hash = bcrypt.hashSync(user)
         //logged.insertUser(user)
         res.cookie('id', hash)
-        dir = 'uploads/' + util.check(req.cookies.id) + '/' //buscamos el directorio (veremos si ejecuta esto antes que multer)
+        dir = '/' + user + '/' 
+        res.cookie('route', dir)
+        fs.mkdirSync('uploads' + dir)
         //res.render('main', fs.readdirSync(dir, 'utf8', true)) //pasamos a render una lista con los ficheros de la carpeta
         res.sendFile(path.join(__dirname ,'views/main.html'))
     }else{

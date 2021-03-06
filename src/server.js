@@ -18,6 +18,12 @@ app.use( express.static(path.join(__dirname, 'public')))  //para que los html en
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 
+try {
+    stat = fs.statSync('uploads/')
+} catch (err) {
+    fs.mkdirSync('uploads/')
+}
+
 //middleware
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
