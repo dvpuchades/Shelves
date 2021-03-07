@@ -11,7 +11,11 @@ const fs = require('fs')
 
 //settings
 database.createConnection()
-app.set('port', 4000) //global variable
+
+let port = 4000
+if(process.argv.length >= 3) { port = process.argv[2] } //first argument is the port
+app.set('port', port) //global variable
+
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 app.use( express.static(path.join(__dirname, 'public')))  //para que los html encuentren las imgs

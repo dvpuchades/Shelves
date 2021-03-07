@@ -8,7 +8,7 @@ let db
 function createConnection(){
     adapter = new FileSync('db.json')
     db = low(adapter)
-    db.defaults({ users:[], codes: [{string: 'HOLA', uses:5}], interactions: [] })
+    db.defaults({ users:[], codes: [{ string: 'TEST', uses:999 }] })
         .write()
 }
 
@@ -23,8 +23,12 @@ function loginUser(name, password){
 }
 
 function signupUser(name, password, code){
-    let hash = bcrypt.hashSync(password)
-    if(useCode(code)){
+    const existingUser = db.get('users')
+        .find({name})
+        .value()
+    console.log(existingUser)
+    if(useCode(code) && existingUser == undefined){
+        let hash = bcrypt.hashSync(password)
         console.log('Registrado')
         db.get('users')
             .push({ name: name, password: hash, 

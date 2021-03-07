@@ -1,11 +1,11 @@
 {
   "name": "shelves",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Software to manage a simple NAS",
   "main": "index.js",
   "repository": "https://github.com/dvpuchades/shelves.git",
   "scripts": {
-    "start": "node src/server",
+    "start": "sudo node src/server 80",
     "dev": "nodemon src/server"
   },
   "author": "dvpuchades",
